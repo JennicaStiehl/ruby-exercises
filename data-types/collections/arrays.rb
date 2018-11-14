@@ -66,39 +66,35 @@ class ArraysTest < Minitest::Test
   end
 
   def test_5
-    skip
     karaoke = ["Shake it Off", "Dancing Queen", "Bohemian Rhapsody"]
     # Call a method on the karaoke variable to ask whether "Toxic"
     # is an element or not
-    toxic_in_array = karaoke
+    toxic_in_array = karaoke.include?("toxic_in_array")
     assert_equal false, toxic_in_array
 
     # Now call a method on the karaoke variable to ask whether "Dancing Queen"
     # is an element or not
-    dancing_queen_in_array = karaoke
+    dancing_queen_in_array = karaoke.include?("Dancing Queen")
     assert_equal true, dancing_queen_in_array
   end
 
   def test_b
-    skip
     band = ["Guitar", "Drums", "Bass"]
     # Call a method on the band variable to add the element "Vocals"
     # to the beginning of the array
-
+    band.insert(0,"Vocals")
     assert_equal ["Vocals", "Guitar", "Drums", "Bass"], band
   end
 
   def test_c
-    skip
     garden = ["Tulips", "Tomatoes", "Basil", "Peppers"]
     # Call a method to remove and return the first element from the garden array
-    first_element = garden
+    first_element = garden.delete_at(0)
     assert_equal ["Tomatoes", "Basil", "Peppers"], garden
     assert_equal "Tulips", first_element
   end
 
   def test_6
-    skip
     teams = ["Rockies", "Avalanche", "Nuggets", "Broncos", "Rapids"]
     # Call a method on the teams variable to get the second, third, and fourth teams
     some_teams = teams

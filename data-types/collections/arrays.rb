@@ -24,47 +24,43 @@ class ArraysTest < Minitest::Test
   end
 
   def test_22
-    skip
     # In the line below, call a method on the nums variable
     # defined above to access the last element
     nums = [1,2,3]
-    actual = nums
+    actual = nums.last
     expected = 3
     assert_equal expected, actual
 
     # Now try to find another way to achieve the same effect
     nums = [1,2,3]
-    actual = nums
+    actual = nums[2]
     expected = 3
     assert_equal expected, actual
   end
 
   def test_3
-    skip
     hummus = ["tahini", "chickpeas", "lemons"]
     # Call a method on the hummus variable that will
     # tell us how many elements there are in the array
-    assert_equal 3, hummus._____
+    assert_equal 3, hummus.count
   end
 
   def test_4
-    skip
     world_cup = ["Germany", "Mexico", "Iceland", "Portugal"]
     # In the line below, add the element "Brazil" to the end of the world_cup array
-
+    world_cup.push("Brazil")
     assert_equal "Brazil", world_cup.last
 
     # Use a different method to add the element "Japan" to the end of the array
-
+    world_cup << "Japan"
     assert_equal "Japan", world_cup.last
   end
 
   def test_a
-    skip
     world_cup = ["Germany", "Mexico", "Iceland", "Portugal"]
     # Call a method on the world_cup variable to remove and return
     # the last element of the array
-    last_element = world_cup
+    last_element = world_cup.pop
     assert_equal "Portugal", last_element
     assert_equal ["Germany", "Mexico", "Iceland"], world_cup
   end
